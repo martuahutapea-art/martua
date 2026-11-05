@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martua Weldy Putra Hutapea | Personal CV</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #101820;
+    --navy-light: #192733;
+    --gold: #d6b36a;
+    --white: #f5f5f5;
+    --gray: #aeb8c2;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(16,24,32,.97);
+    border-bottom: 1px solid #34414c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 10%;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h3 {
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 310px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--gold);
+    box-shadow: 0 15px 45px #0008;
+    background: var(--navy-light);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px 5px 5px 0;
+    border: none;
+    border-radius: 5px;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+/* SECTIONS */
+section {
+    padding: 75px 10%;
+}
+
+.section-dark {
+    background: var(--navy-light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: var(--gold);
+    font-size: 32px;
+}
+
+.section-title p {
+    color: var(--gray);
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 12px auto;
+}
+
+/* ABOUT */
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: var(--gray);
+}
+
+/* DATA */
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.data-box {
+    padding: 20px;
+    background: var(--navy-light);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+.data-box strong {
+    display: block;
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+/* EDUCATION */
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    padding: 22px;
+    margin-bottom: 20px;
+    background: var(--navy-light);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+}
+
+.timeline-item h3 {
+    color: var(--gold);
+}
+
+.timeline-item small {
+    color: var(--gray);
+}
+
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    padding: 22px;
+    background: var(--navy);
+    border-radius: 8px;
+    border: 1px solid #34414c;
+}
+
+.skill h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* HOBBY */
+.hobby-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.hobby {
+    padding: 15px 28px;
+    background: var(--navy-light);
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+    color: var(--gold);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    background: var(--navy-light);
+}
+
+.contact p {
+    color: var(--gray);
+    margin: 14px;
+}
+
+.contact a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #0a1016;
+    color: #87929c;
+    font-size: 13px;
+}
+
+/* ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .profile-img {
+        width: 230px;
+        height: 290px;
+    }
+
+    .data-container,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}
+
+/* PRINT */
+@media print {
+    body {
+        background: white !important;
+        color: #222 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    nav, .btn {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 30px;
+    }
+
+    section {
+        padding: 30px;
+        break-inside: avoid;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .data-box, .timeline-item, .skill {
+        break-inside: avoid;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">MWPH.</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#data">Data Diri</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#hobby">Hobi</a>
+        <a href="#contact">Kontak</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+
+    <div class="hero-text">
+        <div class="small-title">
+            WELCOME TO MY PERSONAL WEBSITE
+        </div>
+
+        <h1>
+            MARTUA WELDY<br>
+            <span>PUTRA HUTAPEA</span>
+        </h1>
+
+        <h3>Student | Teknik Komputer dan Jaringan</h3>
+
+        <p>
+            Halo! Saya Martua Weldy Putra Hutapea.
+            Saya adalah seorang pelajar SMK yang memiliki
+            semangat belajar tinggi, bertanggung jawab,
+            disiplin, dan tertarik pada dunia teknologi.
+            Saya selalu berusaha mengembangkan kemampuan
+            diri untuk meraih masa depan yang lebih baik.
+        </p>
+
+        <a href="#about" class="btn">Tentang Saya</a>
+
+        <button class="btn btn-outline"
+                onclick="window.print()">
+            Download CV PDF
+        </button>
+    </div>
+
+    <!-- GANTI FOTO DENGAN FOTO PRIBADI -->
+    <img src="foto-saya.jpeg"
+         alt="Foto Martua Weldy Putra Hutapea"
+         class="profile-img">
+</div>
+
+<!-- ABOUT -->
+<section class="section-dark reveal" id="about">
+
+    <div class="section-title">
+        <h2>Tentang Saya</h2>
+        <div class="line"></div>
+        <p>About Me</p>
+    </div>
+
+    <div class="about-content">
+        <p>
+            Perkenalkan, nama saya Martua Weldy Putra Hutapea.
+            Saya merupakan pelajar di SMKN 2 Panyabungan
+            dengan jurusan Teknik Komputer dan Jaringan.
+        </p>
+
+        <br>
+
+        <p>
+            Saya memiliki ketertarikan terhadap teknologi
+            komputer dan jaringan. Saya juga senang
+            mempelajari hal-hal baru, memiliki kemampuan
+            komunikasi yang baik, serta mampu bekerja sama
+            dalam tim. Saya percaya bahwa kedisiplinan,
+            kerja keras, dan kemauan untuk terus belajar
+            merupakan kunci untuk mencapai kesuksesan.
+        </p>
+    </div>
+</section>
+
+<!-- PERSONAL DATA -->
+<section class="reveal" id="data">
+
+    <div class="section-title">
+        <h2>Data Pribadi</h2>
+        <div class="line"></div>
+        <p>Personal Information</p>
+    </div>
+
+    <div class="data-container">
+
+        <div class="data-box">
+            <strong>Nama Lengkap</strong>
+            Martua Weldy Putra Hutapea
+        </div>
+
+        <div class="data-box">
+            <strong>Tempat, Tanggal Lahir</strong>
+            Simanondong, 02 Maret 2009
+        </div>
+
+        <div class="data-box">
+            <strong>Jenis Kelamin</strong>
+            Laki-laki
+        </div>
+
+        <div class="data-box">
+            <strong>Alamat</strong>
+            Simanondong
+        </div>
+
+        <div class="data-box">
+            <strong>Status</strong>
+            Pelajar
+        </div>
+
+        <div class="data-box">
+            <strong>Sekolah</strong>
+            SMKN 2 PANYABUNGAN
+        </div>
+
+        <div class="data-box">
+            <strong>Jurusan</strong>
+            Teknik Komputer dan Jaringan
+        </div>
+
+        <div class="data-box">
+            <strong>Email</strong>
+            mhutapea335@gmail.com
+        </div>
+
+        <div class="data-box">
+            <strong>WhatsApp</strong>
+            081260574152
+        </div>
+
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section-dark reveal" id="education">
+
+    <div class="section-title">
+        <h2>Riwayat Pendidikan</h2>
+        <div class="line"></div>
+        <p>Education Background</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>SMKN 2 PANYABUNGAN</h3>
+            <small>Saat ini</small>
+            <p>Jurusan Teknik Komputer dan Jaringan</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>SMPN 1 PANTURA</h3>
+            <small>Sebelumnya</small>
+            <p>LULUS</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>SDN 065 SIMANONDONG</h3>
+            <small>Sebelumnya</small>
+            <p>LULUS</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="reveal" id="skills">
+
+    <div class="section-title">
+        <h2>Keahlian Saya</h2>
+        <div class="line"></div>
+        <p>My Skills</p>
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill">
+            <h3>Komunikasi</h3>
+            <p>
+                Mampu menyampaikan informasi dan
+                berinteraksi dengan orang lain.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Kerja Sama Tim</h3>
+            <p>
+                Mampu bekerja bersama orang lain
+                untuk mencapai tujuan bersama.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Minat Teknologi</h3>
+            <p>
+                Memiliki minat untuk terus mempelajari
+                komputer dan teknologi jaringan.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Semangat Belajar</h3>
+            <p>
+                Selalu terbuka untuk pengalaman baru
+                dan pengembangan kemampuan diri.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- HOBBIES -->
+<section class="section-dark reveal" id="hobby">
+
+    <div class="section-title">
+        <h2>Hobi & Minat</h2>
+        <div class="line"></div>
+        <p>My Interests</p>
+    </div>
+
+    <div class="hobby-container">
+
+        <div class="hobby">🏊 Renang</div>
+        <div class="hobby">📸 Hunting</div>
+        <div class="hobby">🎬 Nonton</div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+
+    <div class="section-title">
+        <h2>Hubungi Saya</h2>
+        <div class="line"></div>
+        <p>Let's Connect With Me</p>
+    </div>
+
+    <p>
+        📧 Email:
+        <a href="mailto:mhutapea335@gmail.com">
+            mhutapea335@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📱 WhatsApp:
+        <a href="https://wa.me/6281260574152"
+           target="_blank">
+            081260574152
+        </a>
+    </p>
+
+    <p>📍 Lokasi: Simanondong</p>
+
+    <a class="btn"
+       href="https://wa.me/6281260574152"
+       target="_blank">
+        Hubungi Saya
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Martua Weldy Putra Hutapea</p>
+    <p>Personal CV Website | Designed With Passion</p>
+</footer>
+
+<script>
+// SMOOTH SCROLL
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// SCROLL ANIMATION
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
